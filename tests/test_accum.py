@@ -12,30 +12,34 @@ import pytest
 from stuff.accum import Accumulator
 
 #----------------------------------------------------------------------
-# Tests
-#----------------------------------------------------------------------
-
-#----------------------------------------------------------------------
 # Best Practice: Pattern to follow while writing test cases
 # Arrange
 # Act
 # Assert
 #----------------------------------------------------------------------
 
+#----------------------------------------------------------------------
+# Tests
+#----------------------------------------------------------------------
+
+@pytest.mark.accumulator
 def test_accumulator_init():
     accum = Accumulator()
     assert accum.count == 0
 
+@pytest.mark.accumulator
 def test_accumulator_add_one():
     accum = Accumulator()       # Arrange: construct accum object
     accum.add()                 # Act: calls accum object ref
     assert accum.count == 1     # Assert: verify count/error
 
+@pytest.mark.accumulator
 def test_accumulator_add_three():
     accum = Accumulator()
     accum.add(3)
     assert accum.count == 3
 
+@pytest.mark.accumulator
 def test_accumulator_add_twice():
     accum = Accumulator()
     accum.add()
