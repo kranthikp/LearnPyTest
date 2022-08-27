@@ -24,7 +24,7 @@ import pytest
 #----------------------------------------------------------------------
 
 def test_one_plus_one():
-    assert 1 + 1 ==2
+    assert 1 + 1 != 2.0
 
 #----------------------------------------------------------------------
 # A most basic test function : A failing test case
