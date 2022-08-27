@@ -1,0 +1,57 @@
+Chapter 9
+----------
+There is a different between testing code
+and testing features
+
+unit test are basically White Box
+
+Feature test - also called Black Box/integration/system/e2e tests
+
+Write a simple rest api test to handle api feature test
+in python,we will use request api just to know how pytest can do simple api test
+not api testing
+
+1. we use most popular package called 'requests' of all time
+2. provides simple api to called programs
+3. example: Here, DuckDuckGo api is used
+
+To Install in cmd > pip install requests
+
+Chapter 10
+----------
+# Extending pytest with plugins
+
+html report
+-------------
+1. pytest-html plugin
+# to install -> pip install pytest-html
+# to use -> python -m pytest --html=report.html
+# customizable
+
+Code Coverage
+-------------
+2. pytest-cov plugin
+# to install -> pip install pytest-cov
+# to use -> python -m pytest --cov=stuff
+# to use on more than one file -> python -m pytest --cov=stuff --cov=tests
+# to use with report -> python -m pytest --cov=stuff --cov-report html
+# reports generated in dir htmlcov
+
+Running Tests in Parallel
+-------------------------
+# by default pytest runs test on at a time
+3. pytest-xdist plugin
+
+# to install -> pip install pytest-xdist
+# note: test cases must be independent cause failure
+# to use -> python -m pytest -n 3 (-n is 'no. of threads to run')
+
+# it can even distributed test execution across multiple machines using SSH or sockets
+# ref doc in pytest
+
+
+BDD - Test Case in Gherkin Style
+---------------------------------
+4. pytest-bdd plugin
+# to install -> pip install pytest-bdd
+# to use -> python -m pytest?? ref BDD
